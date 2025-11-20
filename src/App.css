@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #459769;
+  background: linear-gradient(
+    135deg,
+    rgba(69, 151, 105, 1) 23%,
+    rgba(165, 209, 182, 1) 80%
+  );
+  min-height: 100vh;
+}
+
+.dashboard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  max-width: 800px;
+  height: 600px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.dashboard .title {
+  padding-bottom: 1.5rem;
+  height: 50px;
+}
+
+.balance-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750px;
+  height: 200px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(163, 211, 181, 1) 0%,
+    rgba(107, 146, 38, 1) 100%
+  );
+}
+
+.balance-summary h5 {
+  font-size: 12px;
+  color: #333;
+  padding: 1rem;
+}
+
+.balance-cards {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.balance-card {
+  background-color: whitesmoke;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 345px;
+  height: 70px;
+  padding: 12px;
+}
+
+.balance-card-title {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.balance-card-amount {
+  font-weight: 600;
+}
+
+.transactions-section {
+  width: 750px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.add-transaction-section {
+  width: 370px;
+  background-color: #f6f7fb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 12px;
+}
+
+.add-transaction-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-transaction-form-label {
+  font-weight: 700;
+  font-size: 12px;
+  color: #333;
+  padding-bottom: 6px;
+}
+
+.add-transaction-form-input {
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 0 solid #333;
+}
+
+.add-transaction-submit-button {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #459769;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+legend {
+  margin-top: -5px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #333;
+}
+
+.transaction-list-section {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f7fb;
+  width: 370px;
+}
+
+.transaction-list-title {
+  padding-bottom: 5px;
+}
+
+.transaction-list-section {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f7fb;
+  width: 370px;
+}
+
+.transaction-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 transparent;
+}
+
+.transaction-list::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.transaction-item {
+  padding: 5px;
+  width: 340px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  box-shadow: 4px 0px 0px red;
+}
