@@ -23,8 +23,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: azure;
+  width: 100%;
   max-width: 800px;
-  height: 600px;
   align-items: center;
   border-radius: 12px;
 }
@@ -38,8 +38,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 750px;
-  height: 200px;
+  width: 100%;
+  padding: 1rem;
+  height: auto;
   border-radius: 12px;
   background: linear-gradient(
     135deg,
@@ -55,11 +56,13 @@ body {
 }
 
 .balance-cards {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .balance-card {
@@ -84,22 +87,20 @@ body {
 }
 
 .transactions-section {
-  width: 750px;
-  height: 300px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
+  flex-wrap: wrap;
 }
 
-.add-transaction-section {
-  width: 370px;
+.add-transaction-section,
+.transaction-list-section {
   background-color: #f6f7fb;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 12px;
+  padding: 4px;
+  flex: 1;
+  min-width: 280px;
 }
 
 .add-transaction-form {
@@ -139,29 +140,14 @@ legend {
   color: #333;
 }
 
-.transaction-list-section {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f7fb;
-  width: 370px;
-}
-
 .transaction-list-title {
   padding-bottom: 5px;
 }
 
-.transaction-list-section {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f7fb;
-  width: 370px;
-}
-
 .transaction-list {
+  max-height: 300px;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #c1c1c1 transparent;
 }
@@ -174,8 +160,8 @@ legend {
 
 .transaction-item {
   padding: 5px;
-  width: 340px;
-  height: 50px;
+  width: 98%;
+  min-height: 50px;
   margin-bottom: 10px;
   background-color: white;
   border-radius: 5px;
@@ -184,4 +170,32 @@ legend {
   align-items: center;
   border: none;
   box-shadow: 4px 0px 0px red;
+}
+
+@media (max-width: 768px) {
+  .balance-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .balance-summary {
+    padding: 0.8rem;
+  }
+
+  .balance-summary h5 {
+    font-size: 11px;
+  }
+
+  .add-transaction-submit-button {
+    margin-top: 10px;
+  }
+
+  .transaction-item {
+    font-size: 14px;
+  }
 }

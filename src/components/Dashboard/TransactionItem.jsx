@@ -6,7 +6,7 @@ function TransactionItem({ description, amount }) {
   return (
     <li className="transaction-item" style={style}>
       <div>{description}</div>
-      <div>{amount < 0 ? `-$${Math.abs(amount)}` : `$${amount}`}</div>
+      <div>{amount < 0 ? `-₹${Math.abs(amount)}` : `₹${amount}`}</div>
     </li>
   );
 }
